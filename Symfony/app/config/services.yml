@@ -15,11 +15,13 @@ services:
 #        tags:
 #            - { name: kernel.event_listener, event: kernel.response, method: processBeta }
 #            - { name: kernel.event_listener, event: kernel.controller, method: ignoreBeta }
+
     my.listener:
         class: OC\PlatformBundle\EventListener\SearchIndexer
         tags:
             - { name: doctrine.event_listener, event: postPersist }
 
+    //Listener to us the slugs
     stof_doctrine_extensions.listener.sluggable:
         class: %stof_doctrine_extensions.listener.sluggable.class%
         public: false

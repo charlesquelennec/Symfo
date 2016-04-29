@@ -19,8 +19,8 @@
 {% set runtimeConfig = {"thumbnail": {"size": [50, 50] }} %}
 <img src="{{ asset('pictures/Jellyfish_mini.jpg')| imagine_filter('my_thumb', runtimeConfig)  }}" />
 </br>
-{{ adverts.0.author }}
-{{ adverts.1.author }}
+{#{{ adverts.0.author }}#}
+{#{{ adverts.1.author }}#}
 {% if is_granted('ROLE_AUTEUR') %}
     <li><a href="{{ path('oc_platform_add') }}">Ajouter une annonce</a></li>
     <h3>Formulaire d'annonce</h3>
